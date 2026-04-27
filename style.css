@@ -135,11 +135,13 @@ section {
 
 /* Hero Section */
 #hero {
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     min-height: 100vh;
-    gap: 4rem;
+    gap: 2rem;
     position: relative;
     overflow: hidden;
 }
@@ -148,15 +150,15 @@ section {
     content: '';
     position: absolute;
     top: 0;
-    right: 0;
-    width: 60%;
+    left: 0;
+    width: 100%;
     height: 100%;
     background: url('hero-bg.png') no-repeat center center;
     background-size: cover;
-    mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, transparent);
-    -webkit-mask-image: linear-gradient(to left, rgba(0,0,0,1) 60%, transparent);
+    mask-image: radial-gradient(circle, rgba(0,0,0,0.8), transparent);
+    -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,0.8), transparent);
     z-index: -1;
-    opacity: 0.6;
+    opacity: 0.4;
 }
 
 .hero-content h2 {
@@ -410,8 +412,12 @@ section {
 .research-item {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
+    padding: 0;
+    overflow: hidden;
+}
+
+.research-content-box {
+    padding: 2rem;
 }
 
 .research-icon {
